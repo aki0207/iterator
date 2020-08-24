@@ -1,23 +1,24 @@
 package iteratorPattern;
 
+import java.util.ArrayList;
 
 //本棚を表す
 //このクラスを集合体として扱うためAggregateインターフェースを実装している
 public class BookShelf implements Aggregate {
 
-	private Book[] books;
+	private ArrayList<Book> books;
 	private int last = 0;
 
-	public BookShelf(int maxSize) {
-		this.books = new Book[maxSize];
+	public BookShelf() {
+		this.books = new ArrayList<>();
 	}
 
 	public Book getBookAt(int index) {
-			return books[index];
+			return books.get(index);
 	}
 
 	public void appendBook(Book book) {
-		this.books[last] = book;
+		this.books.add(book);
 		last++;
 	}
 

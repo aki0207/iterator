@@ -5,7 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		// 本が4冊入る本棚を作成
-		BookShelf bookShelf = new BookShelf(4);
+		BookShelf bookShelf = new BookShelf();
 		// 本棚に本を入れる
 		bookShelf.appendBook(new Book("Around the world in 80 Days"));
 		bookShelf.appendBook(new Book("Bible"));
